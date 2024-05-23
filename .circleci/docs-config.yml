@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build-docs:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Building docs"
+
+workflows:
+  docs-workflow:
+    jobs:
+      - lint # use the shared lint job.
+      - build-docs

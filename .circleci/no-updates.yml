@@ -1,0 +1,25 @@
+version: 2.1
+
+# define the parameters from the setup config.
+parameters:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
+    type: boolean
+    default: false
+
+jobs:
+  no-updates:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "No updates have been made"
+
+workflows:
+  no-update-workflow:
+    jobs:
+      - no-updates

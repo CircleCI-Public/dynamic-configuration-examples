@@ -1,0 +1,27 @@
+version: 2.1
+
+# define the parameters from the setup config.
+parameters:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
+    type: boolean
+    default: false
+
+# define the shared jobs that will be available for all continued workflows.
+jobs:
+  lint:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Running linting"
+
+  test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Running tests"

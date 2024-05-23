@@ -1,0 +1,13 @@
+image:https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples/tree/generate-config-file-main.svg?style=svg["CircleCI", link="https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples/?branch=generate-config-file-main"]
+
+== Dynamic configuration examples
+
+This repository contains examples from the CircleCI docs link:https://circleci.com/docs/using-dynamic-config[Using dynamic configuration page].
+
+Each example is configured in a separate branch. Branches with content changes are provided so that you can see the resulting build using dynamic configuration features.
+
+Select a branch to view an example.
+
+=== Generate a configuration file based on modified files
+
+This example is explained in the link:https://circleci.com/docs/using-dynamic-configuration/#generate-a-config-file-based-on-modified-files[CircleCI docs].
