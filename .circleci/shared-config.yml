@@ -25,3 +25,14 @@ jobs:
       - image: cimg/base:stable
     steps:
       - run: echo "Running tests"
+
+  any-change:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "This is a shared job that will reun for any change in the project."
+
+workflows:
+  run-on-any-change:
+    jobs:
+      - any-change

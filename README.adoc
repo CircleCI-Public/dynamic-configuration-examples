@@ -10,4 +10,4 @@ Select a branch to view an example.
 
 === Example: Generate a configuration file based on modified files
 
-This example is explained in the link:https://circleci.com/docs/using-dynamic-configuration/#generate-a-config-file-based-on-modified-files[CircleCI docs].
+The example in this branch is explained in the link:https://circleci.com/docs/using-dynamic-configuration/#generate-a-config-file-based-on-modified-files[CircleCI docs].
