@@ -8,6 +8,6 @@ Each example is configured in a separate branch. Branches with content changes a
 
 Select a branch to view an example.
 
-=== Generate a configuration file based on modified files
+=== Example: Generate a configuration file based on modified files
 
 This example is explained in the link:https://circleci.com/docs/using-dynamic-configuration/#generate-a-config-file-based-on-modified-files[CircleCI docs].
