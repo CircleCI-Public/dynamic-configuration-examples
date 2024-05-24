@@ -1,0 +1,26 @@
+version: 2.1
+
+parameters:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
+    type: boolean
+    default: false
+
+jobs:
+  build-code:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run: echo "Building code"
+
+workflows:
+  code-workflow:
+    jobs:
+      - lint # use the shared lint job.
+      - test # use the shared test job.
+      - build-code

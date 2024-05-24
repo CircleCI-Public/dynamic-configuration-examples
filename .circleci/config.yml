@@ -1,0 +1,62 @@
+version: 2.1
+
+# define this file as the setup phase of your dynamic configuration
+setup: true
+
+# define the parameters that will be used to generate the dynamic configuration.
+parameters:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
+    type: boolean
+    default: false
+
+# invoke the orbs to filter, pack and continue configs.
+orbs:
+  path-filtering: circleci/path-filtering@1.0.0
+  circleci-cli: circleci/circleci-cli@0.1.9
+  continuation: circleci/continuation@1.0.0
+
+jobs:
+  setup:
+    executor: path-filtering/default
+    steps:
+      - checkout
+
+      # Install the CircleCI CLI
+      - circleci-cli/install
+
+      # Generate the shared configuration from a directory with the pack command.
+      - run:
+          name: Generate shared configuration
+          command: circleci config pack .circleci/shared >> .circleci/shared-config.yml
+
+      # The mapping will be used to generate the dynamic configuration for all conditions that match.
+      - path-filtering/set-parameters:
+          base-revision: pack-validate-continue-main
+          config-path: .circleci/no-updates.yml
+          mapping: |
+            .* always-continue true .circleci/shared-config.yml
+            src/.* build-code true .circleci/code-config.yml
+            docs/.* build-docs true .circleci/docs-config.yml
+
+      # Generate the dynamic configuration based on the parameters set in the previous step.
+      - path-filtering/generate-config
+
+      # Optionally validate the generated configuration.
+      - run:
+          name: Validate config
+          command: circleci config validate /tmp/generated-config.yml
+
+      # Continue the pipeline with the generated configuration.
+      - continuation/continue:
+          configuration_path: /tmp/generated-config.yml
+
+workflows:
+  setup-workflow:
+    jobs:
+      - setup

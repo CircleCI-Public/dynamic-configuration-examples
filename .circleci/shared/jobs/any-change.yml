@@ -1,0 +1,4 @@
+docker:
+  - image: cimg/base:stable
+steps:
+  - run: echo "This is a shared job that will run for any change in the project."
