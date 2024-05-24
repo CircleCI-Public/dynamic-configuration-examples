@@ -1,0 +1,3 @@
+== Docs README
+
+This is the docs README for the link:https://circleci.com/docs/using-dynamic-configuration/#pack-generate-validate[Generate a condiguration file based on modified files] example in the CircleCI docs.
