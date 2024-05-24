@@ -1,4 +1,4 @@
-image:https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples.svg?style=svg["CircleCI", link="https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples]
+image:https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples.svg?style=svg["CircleCI-Public", link="https://circleci.com/gh/CircleCI-Public/dynamic-configuration-examples]
 
 == Dynamic configuration examples
 
