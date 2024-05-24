@@ -2,6 +2,6 @@
 
 This repository contains examples from the CircleCI docs link:https://circleci.com/docs/using-dynamic-config[Using dynamic configuration page].
 
-Each example is configured in a separate branch. Branches with content changes are provided so that you can see the resulting build using dynamic configuration features.
+Each example is configured in a separate branch (`*-main`). Branches with content changes are provided so that you can see the resulting build using dynamic configuration features (`*-modified`).
 
 Select a branch to view an example.
