@@ -2,6 +2,14 @@
 
 This repository contains examples from the CircleCI docs link:https://circleci.com/docs/using-dynamic-config[Using dynamic configuration page].
 
-Each example is configured in a separate branch (`*-main`). Branches with content changes are provided so that you can see the resulting build using dynamic configuration features (`*-modified`).
+Each example is configured in a separate branch (`-main`). Branches with content changes are provided so that you can see the resulting build using dynamic configuration features (`-modified`).
 
-Select a branch to view an example.
+Select a branch to view an example, or follow these links:
+
+* Generate a configuration file based on modified files
+** Main: link:https://github.com/CircleCI-Public/dynamic-configuration-examples/tree/generate-config-file-main[GitHub], link:https://app.circleci.com/pipelines/github/CircleCI-Public/dynamic-configuration-examples?branch=generate-config-file-main[CircleCI build]
+** Modified: link:https://github.com/CircleCI-Public/dynamic-configuration-examples/tree/generate-config-file-modified[GitHub], link:https://app.circleci.com/pipelines/github/CircleCI-Public/dynamic-configuration-examples?branch=generate-config-file-modified[CircleCI build]
+
+* Pack, generate, and validate a configuration file for pipeline configuration
+** Main: link:https://github.com/CircleCI-Public/dynamic-configuration-examples/tree/pack-validate-continue-main[GitHub], link:https://app.circleci.com/pipelines/github/CircleCI-Public/dynamic-configuration-examples?branch=pack-validate-continue-main[CircleCI build]
+** Modified: link:https://github.com/CircleCI-Public/dynamic-configuration-examples/tree/pack-validate-continue-modified[GitHub], link:https://app.circleci.com/pipelines/github/CircleCI-Public/dynamic-configuration-examples?branch=pack-validate-continue-modified[CircleCI build]
